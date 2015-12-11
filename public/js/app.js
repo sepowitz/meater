@@ -1,2 +1,2 @@
-var app = angular.module('MeaterApp', []);
+var app = angular.module('MeaterApp', ['ngRoute']);
 
