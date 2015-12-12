@@ -9,12 +9,12 @@
 	<input ng-model="meatCtrl.meat" value="chicken" name="meat" id="chicken" type="radio">
 	<label for="chicken">chicken</label>
 	<!-- Select Cooking Preference Type -->
-	<select ng-model="meatCtrl.preference" ng-if="meatCtrl.meat != 'chicken'" name="preference">
-	  <option value="rare">Rare</option>
-	  <option value="medium-rare">Medium Rare</option>
-	  <option value="medium">Medium</option>
-	  <option value="medium-well">Medium Well</option>
-	  <option value="well-done">Well Done</option>
-	</select>
+	<input ng-model="meatCtrl.preference" value="rare" name="preference" id="rare" type="radio">
+	<label for="rare">Rare</label>
+	<input ng-model="meatCtrl.preference" value="medium" name="preference" id="medium" type="radio">
+	<label for="medium">Medium</label>
+	<input ng-model="meatCtrl.preference" value="well-done" name="preference" id="well-done" type="radio">
+	<label for="well-done">Well Done</label>
+	<input ng-model="meatCtrl.guestNum" type="number" min=0 max=20>
 	<input type="submit">
 </form>

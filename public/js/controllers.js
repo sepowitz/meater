@@ -5,13 +5,17 @@ app.controller('MeatController', ['$location', 'Calculator', function( $location
 	var controller = this;
 
 	this.makeRequest = function(){
-		Calculator.meat = controller.meat;
-		$location.path('/getcookin')
+		Calculator.cookTemp = Calculator.getTemp(controller);
+		Calculator.meatWeight = Calculator.getWeight(controller);
+		Calculator.cookTime = Calculator.getCookTime(controller);
+		$location.path('/getcookin');
 	};
 }]);
 
 app.controller('ResultsController', ['$http', 'Calculator', function( $http, Calculator){
 	controller = this;
 
-	this.meat = Calculator.meat;
+	this.cookTemp = Calculator.cookTemp;
+	this.meatWeight = Calculator.meatWeight;
+	this.cookTime = Calculator.cookTime;
 }]);
