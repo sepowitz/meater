@@ -1,10 +1,20 @@
-<form>
-	<input id="beef" type="radio">
+<form ng-submit="meatCtrl.makeRequest()">
+	<!-- Select Meat Type -->
+	<input ng-model="meatCtrl.meat" value="beef" name="meat" id="beef" type="radio">
 	<label for="beef">beef</label>
-	<input id="pork" type="radio">
-	<label for="prk"></label>
-	<input id="lamb" type="radio">
-	<label for="lamb"></label>
-	<input id="chicken" type="radio">
-	<label for="chicken"></label>
+	<input ng-model="meatCtrl.meat" value="pork" name="meat" id="pork" type="radio">
+	<label for="pork">pork</label>
+	<input ng-model="meatCtrl.meat" value="lamb" name="meat" id="lamb" type="radio">
+	<label for="lamb">lamb</label>
+	<input ng-model="meatCtrl.meat" value="chicken" name="meat" id="chicken" type="radio">
+	<label for="chicken">chicken</label>
+	<!-- Select Cooking Preference Type -->
+	<select ng-model="meatCtrl.preference" ng-if="meatCtrl.meat != 'chicken'" name="preference">
+	  <option value="rare">Rare</option>
+	  <option value="medium-rare">Medium Rare</option>
+	  <option value="medium">Medium</option>
+	  <option value="medium-well">Medium Well</option>
+	  <option value="well-done">Well Done</option>
+	</select>
+	<input type="submit">
 </form>

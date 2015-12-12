@@ -7,8 +7,8 @@ app.config(function($routeProvider, $locationProvider) {
 	}).
 	when('/getcookin', {
 		templateUrl:'../templates/results.html',
-		controller: 'MeatController',
-		controllerAs: 'meatCtrl'
+		controller: 'ResultsController',
+		controllerAs: 'resultsCtrl'
 	}).
 	when('/:username/history', {
 		templateUrl: '../templates/history.html',
