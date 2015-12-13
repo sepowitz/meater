@@ -16,6 +16,7 @@ app.controller('ResultsController', ['$http', 'Calculator', function( $http, Cal
 	controller = this;
 
 	this.cookTemp = Calculator.cookTemp;
-	this.meatWeight = Calculator.meatWeight;
-	this.cookTime = Calculator.cookTime;
+	this.meatWeight = Calculator.meatWeight / 16;
+	this.cookTimeHour = Math.floor(Calculator.cookTime/60);
+	this.cookTimeMinute = Calculator.cookTime > 60 ? Calculator.cookTime % 60 : Calculator.cookTime;
 }]);
