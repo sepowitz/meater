@@ -1,20 +1,20 @@
 <form ng-submit="meatCtrl.makeRequest()">
 	<!-- Select Meat Type -->
 	<input ng-model="meatCtrl.meat" value="beef" name="meat" id="beef" type="radio">
-	<label for="beef">beef</label>
+	<label ng-class="{meatSelect:meatCtrl.meat === 'beef'}" for="beef">beef</label>
 	<input ng-model="meatCtrl.meat" value="pork" name="meat" id="pork" type="radio">
-	<label for="pork">pork</label>
+	<label ng-class="{meatSelect:meatCtrl.meat === 'pork'}" for="pork">pork</label>
 	<input ng-model="meatCtrl.meat" value="lamb" name="meat" id="lamb" type="radio">
-	<label for="lamb">lamb</label>
+	<label ng-class="{meatSelect:meatCtrl.meat === 'lamb'}" for="lamb">lamb</label>
 	<input ng-model="meatCtrl.meat" value="chicken" name="meat" id="chicken" type="radio">
-	<label for="chicken">chicken</label>
+	<label ng-class="{meatSelect:meatCtrl.meat === 'chicken'}" for="chicken">chicken</label>
 	<!-- Select Cooking Preference Type -->
 	<input ng-model="meatCtrl.preference" value="rare" name="preference" id="rare" type="radio">
-	<label for="rare">Rare</label>
+	<label ng-class="{preferenceSelect:meatCtrl.preference === 'rare'}" for="rare">Rare</label>
 	<input ng-model="meatCtrl.preference" value="medium" name="preference" id="medium" type="radio">
-	<label for="medium">Medium</label>
+	<label ng-class="{preferenceSelect:meatCtrl.preference === 'medium'}" for="medium">Medium</label>
 	<input ng-model="meatCtrl.preference" value="well-done" name="preference" id="well-done" type="radio">
-	<label for="well-done">Well Done</label>
+	<label ng-class="{preferenceSelect:meatCtrl.preference === 'well-done'}" for="well-done">Well Done</label>
 	<input ng-model="meatCtrl.guestNum" type="number" min=0 max=20>
 	<input type="submit">
 </form>

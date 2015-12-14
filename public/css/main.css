@@ -1,0 +1,15 @@
+/** Form Styling **/
+
+
+/************************************
+	These classes are added 
+	using Angular's ng-class directive
+*************************************/
+
+.meatSelect {
+	color: red;
+}
+
+.preferenceSelect {
+	color: blue;
+}
