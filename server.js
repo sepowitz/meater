@@ -5,11 +5,14 @@ var express = require('express'),
 		server = express();
 
 
+		/** Server Setup **/
 		server.use(express.static('public'));
+
 		server.use(bodyParser.urlencoded({
 			extended: true
 		}));
 		server.use(bodyParser.json);
+
 		server.use(methodOverride('_method'));
 
 		server.use(function(req, res, next){
@@ -25,7 +28,7 @@ var express = require('express'),
 
 
 
-
+		
 		server.listen(3000, function(){
 			console.log('listening on port 3000');
 		});

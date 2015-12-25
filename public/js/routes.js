@@ -1,17 +1,17 @@
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider.
 	when('/', {
-		templateUrl: '../templates/form.html',
+		templateUrl: '../templates/_form.html',
 		controller: 'MeatController',
 		controllerAs: 'meatCtrl'
 	}).
 	when('/getcookin', {
-		templateUrl:'../templates/results.html',
+		templateUrl:'../templates/_results.html',
 		controller: 'ResultsController',
 		controllerAs: 'resultsCtrl'
 	}).
 	when('/:username/history', {
-		templateUrl: '../templates/history.html',
+		templateUrl: '../templates/_history.html',
 		controller: 'HistoryController',
 		controllerAs: 'historyCtrl'
 	}).

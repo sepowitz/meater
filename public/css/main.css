@@ -13,6 +13,20 @@ body {
 	text-align: center;
 }
 
+header {
+	width: 100%;
+	text-align: center;
+	padding: 50px 0;
+}
+
+header h1 {
+	font-size: 40px;
+	font-weight: lighter;
+	font-family: monospace;
+	letter-spacing: .8em;
+	text-transform: uppercase;
+}
+
 /** Form Styling **/
 
 form {
@@ -25,11 +39,18 @@ form {
 
 .meat-selection-div {
 	text-align: center;
+	margin: 5% 0 10%;
+}
+
+.meat-selection-div h3 {
+	font-family: monospace;
+	font-weight: lighter;
+	margin-bottom: 20px;
 }
 
 .meat-selection-div, .preference-selection-div {
 	width: 100%;
-	background: red;
+	/*background: red;*/
 	padding: 10px 0;
 }
 
@@ -50,10 +71,12 @@ form {
 #beefy {
 	background: white;
 	width: 20%;
-	padding: 10px;
+	/*padding: 10px;*/
 	display: inline-block;
 	text-align: center;
 	height: 20%;
+	box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.50);
+	margin: 0 20px;
 }
 
 #beefy object {
@@ -76,6 +99,9 @@ input[type=radio] {
 	display: none;
 }
 
+#well-done:checked + label {
+	color: blue;
+}
 
 input[type=number] {
 	width: 20%;
@@ -99,7 +125,7 @@ label:hover {
 *************************************/
 
 .meatSelect {
-	background: green;
+	border-bottom: solid 4px red;
 }
 
 .preferenceSelect {

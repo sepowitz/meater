@@ -11,12 +11,12 @@
 </head>
 <base href="/"></base>
 <body ng-app="MeaterApp">
+	<div class="header" ng-include src="'includes/header.html'"></div>
+	<ng-view></ng-view>
 
-<ng-view></ng-view>
-
-<script src="js/app.js" type="text/javascript"></script>
-<script src="js/routes.js" type="text/javascript"></script>
-<script src="js/services.js" type="text/javascript"></script>
-<script src="js/controllers.js" type="text/javascript"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+	<script src="js/routes.js" type="text/javascript"></script>
+	<script src="js/services.js" type="text/javascript"></script>
+	<script src="js/controllers.js" type="text/javascript"></script>
 </body>
 </html>

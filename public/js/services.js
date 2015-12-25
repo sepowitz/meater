@@ -19,17 +19,17 @@ app.service('Calculator', function(){
 		if(controller.meat == 'beef'){
 			if(controller.preference == 'rare'){
 				return 145;
-			}if(controller.preference == 'medium'){
+			} if(controller.preference == 'medium'){
 				return 160;
-			}if(controller.preference == 'well-done'){
+			} if(controller.preference == 'well-done'){
 				return 170;
 			}
 		} else if(controller.meat == 'lamb'){
-				if(controller.preference == 'rare'){
+				  if(controller.preference == 'rare'){
 					//LAMB: Rare temp
-				}if(controller.preference == 'medium'){
+				} if(controller.preference == 'medium'){
 					//LAMB: Medium temp
-				}if(controller.preference == 'well-done'){
+				} if(controller.preference == 'well-done'){
 					//LAMB: Well done temp
 				}
 		} else if(controller.meat == 'pork'){
