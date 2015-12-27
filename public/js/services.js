@@ -2,19 +2,22 @@
 app.service('Calculator', function(){
 	var calc = this;
 
-
+	//This calculates the ppropriate cooking temp
+	//based on users meat choice
 	this.getTemp = function(controller){
 		if(controller.meat == 'beef'){
 				return 325;
 			} else if(controller.meat == 'lamb'){
-
+				return 325;
 			} else if(controller.meat == 'pork'){
-
+				return 350;
 			} else if(controller.meat == 'chicken'){
-
+				return 350;
 			}
 	};
 
+	//This calculates the desired inner temp
+	//based on users meat and cooking preference
 	this.getInnerTemp = function(){
 		if(controller.meat == 'beef'){
 			if(controller.preference == 'rare'){
@@ -26,16 +29,16 @@ app.service('Calculator', function(){
 			}
 		} else if(controller.meat == 'lamb'){
 				  if(controller.preference == 'rare'){
-					//LAMB: Rare temp
+					return 130;
 				} if(controller.preference == 'medium'){
-					//LAMB: Medium temp
+					return 140;
 				} if(controller.preference == 'well-done'){
-					//LAMB: Well done temp
+					return 150;
 				}
 		} else if(controller.meat == 'pork'){
-				//PORK: ideal temp
+				return 145;
 		} else if(controller.meat == 'chicken'){
-				//Chicken: ideal temp
+				return 165;
 		}
 	};
 
@@ -50,14 +53,27 @@ app.service('Calculator', function(){
 	//cooking preference. This converts the weight
 	//from oz to pounds prior to calculating the desired cook time
 	this.getCookTime = function(controller){
-		if(controller.meat == 'beef' && controller.preference == 'rare'){
-			return Math.floor((calc.meatWeight/16) * 25);
-		} else if(controller.meat == 'beef' && controller.preference == 'medium'){
+		if(controller.meat === 'beef'){
+			if(controller.preference === 'rare'){
+				return Math.floor((calc.meatWeight/16) * 25);
+			} if(controller.preference === 'medium'){
+					return Math.floor((calc.meatWeight/16) * 30);
+			} else if(controller.meat === 'well-done'){
+						 return Math.floor((calc.meatWeight/16) * 34);
+			}
+		} else if(controller.meat === 'lamb'){
+				if(controller.preference === 'rare'){
+					return Math.floor((calc.meatWeight/16) * 15);
+				} if(controller.preference === 'medium'){
+						return Math.floor((calc.meatWeight/16) * 20);
+				} else if(controller.meat === 'well-done'){
+								 return Math.floor((calc.meatWeight/16) * 30);
+				}
+		} else if(controller.meat === 'pork'){
 			return Math.floor((calc.meatWeight/16) * 30);
-		} else if(controller.meat == 'beef' && controller.preference == 'well-done'){
-			return Math.floor((calc.meatWeight/16) * 34);
+		} else if(controller.meat === 'chicken'){
+			return Math.floor((calc.meatWeight/16) * 20);
 		}
 	};
-
 });
 
