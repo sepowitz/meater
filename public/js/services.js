@@ -2,8 +2,24 @@
 app.service('Calculator', function(){
 	var calc = this;
 
-	//This calculates the ppropriate cooking temp
+
+
+	this.meatType = function (controller){
+		return controller.meat;
+	};
+
+	this.cookPref = function(controller){
+		return controller.preference;
+	};
+
+	this.guestNum = function(controller){
+		return controller.guestNum;
+	};
+
+
+	//This calculates the appropriate cooking temp
 	//based on users meat choice
+
 	this.getTemp = function(controller){
 		if(controller.meat == 'beef'){
 				return 325;
@@ -58,7 +74,7 @@ app.service('Calculator', function(){
 				return Math.floor((calc.meatWeight/16) * 25);
 			} if(controller.preference === 'medium'){
 					return Math.floor((calc.meatWeight/16) * 30);
-			} else if(controller.meat === 'well-done'){
+			} else if(controller.preference === 'well-done'){
 						 return Math.floor((calc.meatWeight/16) * 34);
 			}
 		} else if(controller.meat === 'lamb'){
@@ -66,7 +82,7 @@ app.service('Calculator', function(){
 					return Math.floor((calc.meatWeight/16) * 15);
 				} if(controller.preference === 'medium'){
 						return Math.floor((calc.meatWeight/16) * 20);
-				} else if(controller.meat === 'well-done'){
+				} else if(controller.preference === 'well-done'){
 								 return Math.floor((calc.meatWeight/16) * 30);
 				}
 		} else if(controller.meat === 'pork'){

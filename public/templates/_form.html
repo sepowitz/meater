@@ -1,7 +1,7 @@
 <form ng-submit="meatCtrl.makeRequest()">
 	<!-- Select Meat Type -->
 	<div class="meat-selection-div">
-		<h3>Choose your meat</h3>
+		<h3>Meat variety</h3>
 		<div id="beefy">
 			<input ng-model="meatCtrl.meat" value="beef" name="meat" id="beef" type="radio">
 			<label ng-class="{meatSelect:meatCtrl.meat === 'beef'}" for="beef"><object type="image/svg+xml" data="../assets/icons/beef.svg">Your browser does not support SVG</object></label>
@@ -21,15 +21,21 @@
 	</div>
 	<!-- Select Cooking Preference Type -->
 	<div class="preference-selection-div">
-		<input ng-disabled="meatCtrl.meat === 'chicken' || meatCtrl.meat === 'pork'" ng-model="meatCtrl.preference" value="rare" name="preference" id="rare" type="radio">
-		<label ng-class="{preferenceSelect:meatCtrl.preference === 'rare'}" for="rare">rare</label>
-		<input ng-disabled="meatCtrl.meat === 'chicken' || meatCtrl.meat === 'pork'" ng-model="meatCtrl.preference" value="medium" name="preference" id="medium" type="radio">
-		<label ng-class="{preferenceSelect:meatCtrl.preference === 'medium'}" for="medium">medium</label>
-		<input ng-checked="meatCtrl.meat === 'chicken' || meatCtrl.meat === 'pork'" ng-model="meatCtrl.preference" value="well-done" name="preference" id="well-done" type="radio">
-		<label ng-class="{preferenceSelect:meatCtrl.preference === 'well-done'}" for="well-done">well done</label>
-		<input ng-model="meatCtrl.guestNum" type="number" min=0 max=20>
+		<div class="cooking-pref">
+			<h3>Cooking preference</h3>
+			<input ng-disabled="meatCtrl.meat === 'chicken' || meatCtrl.meat === 'pork'" ng-model="meatCtrl.preference" value="rare" name="preference" id="rare" type="radio">
+			<label ng-class="{preferenceSelect:meatCtrl.preference === 'rare'}" for="rare">rare</label>
+			<input ng-disabled="meatCtrl.meat === 'chicken' || meatCtrl.meat === 'pork'" ng-model="meatCtrl.preference" value="medium" name="preference" id="medium" type="radio">
+			<label ng-class="{preferenceSelect:meatCtrl.preference === 'medium'}" for="medium">medium</label>
+			<input ng-checked="meatCtrl.meat === 'chicken' || meatCtrl.meat === 'pork'" ng-model="meatCtrl.preference" value="well-done" name="preference" id="well-done" type="radio">
+			<label ng-class="{preferenceSelect:meatCtrl.preference === 'well-done'}" for="well-done">well done</label>
+		</div>
+		<div class="guest-pref">
+			<h3>Guest number</h3>
+			<input ng-model="meatCtrl.guestNum" type="number" min=0 max=20>
+		</div>
 	</div>
 	<!-- Select Number of Guests -->
 
-	<input type="submit">
+	<input type="submit" value="get cooking">
 </form>
