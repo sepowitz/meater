@@ -19,7 +19,7 @@ app.controller('MeatController', ['$location', 'Calculator', function( $location
 	};
 }]);
 
-app.controller('ResultsController', ['$http', 'Calculator', function( $http, Calculator){
+app.controller('ResultsController', ['$http', '$interval', 'Calculator', function( $http, $interval, Calculator){
 	controller = this;
 
 	this.meat = Calculator.meat;
@@ -30,4 +30,16 @@ app.controller('ResultsController', ['$http', 'Calculator', function( $http, Cal
 	this.meatWeight = Calculator.meatWeight / 16;
 	this.cookTimeHour = Math.floor(Calculator.cookTime/60);
 	this.cookTimeMinute = Calculator.cookTime > 60 ? Calculator.cookTime % 60 : Calculator.cookTime;
+
+	this.countdown = function(){
+		countdown = $interval(function(){
+			console.log(controller.cookTimeMinute)
+			controller.cookTimeMinute -= 1;
+		}, 1000);
+	};
+
+	this.endCountdown = function(){
+		$interval.cancel(countdown);
+	};
+
 }]);
