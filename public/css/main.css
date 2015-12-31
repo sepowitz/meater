@@ -189,3 +189,62 @@ label:hover {
 	background: #983838;
 	color: white;
 }
+
+/**********************
+ 	Results Section 
+ **********************/
+
+ #result-section {
+ 	width: 80%;
+ 	margin: 0 auto;
+ }
+
+ .result-summary {
+ 	width: 50%;
+ 	margin: 0 auto;
+ 	border-bottom: solid 1px black;
+ 	padding: 20px 0;
+ }
+
+ #result-section div:nth-of-type(3) {
+ 	margin-bottom: 50px;
+ }
+
+ .result-summary h4 {
+ 	color: #868686;
+ 	text-transform: uppercase;
+ 	font-size: 1.4em;
+ 	letter-spacing: .2em;
+ }
+
+
+.result-summary span {
+	display: inline-block;
+	float: right;
+	position: relative;
+	bottom: 20px;
+	color: #FF0000;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	letter-spacing: .2em;
+}
+
+.cooking-rec {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cooking-rec > div {
+	float: left;
+	width: 33.333%;
+	padding: 20px 0;
+}
+
+.cooking-rec > div p {
+	font-size: 2em;
+	color: #FF0000;
+	letter-spacing: .2em;
+	padding: 20px 0;
+}

@@ -1,21 +1,28 @@
-<div>
+<div id="result-section">
 
-	<div>
-		<h4>meat: <span>{{resultsCtrl.meat}}</span></h4>
+	<div class="result-summary">
+		<h4>meat:</h4> <span>{{resultsCtrl.meat}}</span>
 	</div>
 
-	<div>
-		<h4>cooking preference: <span>{{resultsCtrl.preference}}</span></h4>
+	<div class="result-summary">
+		<h4>cooking preference:</h4> <span>{{resultsCtrl.preference}}</span>
 	</div>
 
-	<div>
-		<h4>number of guests: <span>{{resultsCtrl.guests}}</span></h4>
+	<div class="result-summary">
+		<h4>number of guests: </h4><span>{{resultsCtrl.guests}}</span>
 	</div>
-
-	
-	
-	Temp:{{resultsCtrl.cookTemp}}<br/>
-	Weight:{{resultsCtrl.meatWeight}}<br/>
-	Time:{{resultsCtrl.cookTimeHour}} : {{resultsCtrl.cookTimeMinute}}
-
+	<div class="cooking-rec">
+		<div class="temp-col">
+			<h4>temp</h4>
+			<p>{{resultsCtrl.cookTemp}}</p>
+		</div>
+		<div class="weight-col">
+			<h4>weight</h4>
+			<p>{{resultsCtrl.meatWeight}}</p>
+		</div>
+		<div class="time-col">
+			<h4>time</h4>
+			<p>{{resultsCtrl.cookTimeHour}} : {{resultsCtrl.cookTimeMinute}}</p>
+		</div>
+	</div>
 </div>
